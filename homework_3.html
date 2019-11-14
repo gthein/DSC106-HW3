@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+    <link rel = "stylesheet" href = "make_beautiful.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+</head>
+
+<body>
+    <table id = "titleTable">
+        <tr>
+            <td width = "5%"><img src = "assets/homer.png" class = "logo"></td>
+            <td width = "95%">Energy Springfield</td>
+        </tr>
+    </table>
+
+    <table class = "simple">
+            <tr id = "sharedGrid" class = "container">
+                <td width = "50%">
+                    <table id = "share">
+                        <tr style = "height: 50%">
+                            <td id = "energy"> </td>
+                        </tr>
+                        <tr style = "height: 30%">
+                            <td id = "price"></td>
+                        </tr>
+                        <tr>
+                            <td id = "temp"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table id = "half">
+                        <tr>
+                            <td id = "legendGrid"> 
+                                <table style="font-size: 10pt;">
+                                    <tr>
+                                        <td> <b>Power </b> </br>MW </td>
+                                        <td> <b>Contribution </b> </br>to demand</td>
+                                        <td><b> Av.Value</b></br>$/MWh</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Sources</b></td>
+                                        <td> <div id = "sourcet" class = "bold"></div></td>
+                                        <td><div id = "avgprice" class = "bold"></div></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>Wind</td>
+                                        <td><div id="windpwr"></div></td>
+                                        <td><div id="windcnt"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hydro</td>
+                                        <td><div id="hydpwr"></div></td>
+                                        <td><div id="hydcnt"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gas (CCGT)</td>
+                                        <td><div id="gaspwr"></div></td>
+                                        <td><div id="gascnt"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Distillate</td>
+                                        <td><div id="distpwr"></div></td>
+                                        <td><div id="distcnt"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Black Coal</td>
+                                        <td><div id="coalpwr"></div></td>
+                                        <td><div id="coalcnt"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Loads</b></td>
+                                        <td><div id="loadpwr" class = "bold"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Exports</td>
+                                        <td><div id="exppwr"></td>
+                                        <td><div id="expcnt"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pumps</td>
+                                        <td><div id="pmpwr"></td>
+                                        <td><div id="pmcnt"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Net</b></td>
+                                        <td><div id = "netpwr" class = "bold"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Renewables</b></td>
+                                        <td><div id = "rencnt" class = "bold"></div></td>
+                                    </tr>
+                                </table>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td id = "toggleGrid"></td>
+                        </tr>
+
+                    </table>
+
+                </td>
+            </tr>    
+       </table>
+
+    <script src="le_main.js"></script>
+</body>
